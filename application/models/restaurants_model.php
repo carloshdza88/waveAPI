@@ -10,10 +10,6 @@ class Restaurants_model extends CI_Model
     // si le pasamos le id como argument o no
     public function restaurant_info($key)
     {
-      $key_restaurant = $this->input->get('keyrestaurant', TRUE);
-
-       echo "model " . $key_restaurant;
-
         $this->db->select('nombre,clave_restaurante,imagen,division');
         $this->db->from('restaurantes');
         $this->db->where("clave_restaurante",'BDw');
