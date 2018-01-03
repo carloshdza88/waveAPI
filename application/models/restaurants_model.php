@@ -12,7 +12,7 @@ class Restaurants_model extends CI_Model
     {
         $this->db->select('nombre,clave_restaurante,imagen,division');
         $this->db->from('restaurantes');
-        $this->db->where("clave_restaurante",'BDw');
+        $this->db->where("clave_restaurante",$key);
 
         $consulta = $this->db->get();
         $resultado = $consulta->result();
