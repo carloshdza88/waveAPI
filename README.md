@@ -2,7 +2,7 @@
 
 ### GET Restaurant info:
 
- * http://159.203.255.248//waveAPI/index.php/restaurants/info?keyrestaurant=BDw
+ * http://159.203.255.248/waveAPI/index.php/restaurants/info?keyrestaurant=BDw
 
 ### GET Table info:
 
