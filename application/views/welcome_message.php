@@ -1,5 +1,5 @@
 <?php
 
-echo "codeigniter";
+echo "codeigniter hola";
 
 ?>

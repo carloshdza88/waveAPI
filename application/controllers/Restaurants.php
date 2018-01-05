@@ -24,6 +24,7 @@ class Restaurants extends CI_Controller {
          $this->load->model('restaurants_model');
          $this->load->helper('url');
 
+
      }
 
   public function info()

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Table extends CI_Controller {
+class Tables extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,23 +18,30 @@ class Table extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-   public function __construct()
-   {
-       parent::__construct();
-       $this->load->model('tables_model');
-       $this->load->helper('url');
 
-  }
+  public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('tables_model');
+        $this->load->helper('url');
+
+
+    }
 
   public function info()
 	{
     $key_restaurant = $this->input->get('keyrestaurant', TRUE);
     $key_sucursal = $this->input->get('keysucursal', TRUE);
     $key_table = $this->input->get('keytable', TRUE);
+    $key_datestart = $this->input->get('keydatestart', TRUE);
+    $key_datefinish = $this->input->get('keydatefinish', TRUE);
 
-    $dato['tabla'] = json_encode($this->tables_model->table_info($key_restaurant,$key_sucursal,$key_table));
+    $dato['tabla'] = json_encode($this->tables_model->table_info($key_restaurant,$key_sucursal,
+                                                                 $key_table,$key_datestart,
+                                                                 $key_datefinish));
 
     $this->load->view('info',$dato);
+
 	}
 
 	public function index()

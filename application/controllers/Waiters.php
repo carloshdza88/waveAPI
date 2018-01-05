@@ -21,7 +21,7 @@ class Waiters extends CI_Controller {
    public function __construct()
      {
          parent::__construct();
-         $this->load->model('waiters_model');
+         $this->load->model('Waiters_model');
          $this->load->helper('url');
 
      }
@@ -37,7 +37,7 @@ class Waiters extends CI_Controller {
 
 		$this->load->view('crear',$dato);
 
-    
+
 	}
 
 	public function index()
